@@ -51,6 +51,50 @@
 
 						<p id="user"></p>
 
+						<div class="my-bitmoji-stickerpicker-icon-target" />
+				    <script>
+				       window.snapKitInit = function () {
+				        // Argument 1
+				        var bitmojiWebPickerIconClass =
+				          'my-bitmoji-stickerpicker-icon-target';
+
+				        // Argument 2
+				        var uiOptions = {
+				          onStickerPickCallback:
+				            function onStickerPickCallback(bitmojiImgURL){
+				              console.log(bitmojiImgURL);
+				            },
+				          webpickerPosition: 'bottomRight',
+				        };
+
+				        // Argument 3
+				        var loginParamsObj = {
+				          clientId: '86211806-7778-49d4-a575-b30590ea5d18',
+				          redirectURI: 'https://heysalem.github.io/salem.html',
+				          scopeList: [ // the list of scopes you are approved for
+				           'user.bitmoji.avatar',
+				           'user.display_name',
+				          ],
+				        };
+
+				        // Mount Bitmoji Icon(s)
+				        snap.bitmojikit.mountBitmojiStickerPickerIcons(
+				          bitmojiWebPickerIconClass,
+				          uiOptions,
+				          loginParamsObj,
+				        );
+				      };
+
+				      // Load the SDK asynchronously
+				      (function (d, s, id) {
+				        var js, sjs = d.getElementsByTagName(s)[0];
+				        if (d.getElementById(id)) return;
+				        js = d.createElement(s); js.id = id;
+				        js.src = "https://sdk.snapkit.com/js/v1/login_bitmoji.js";
+				        sjs.parentNode.insertBefore(js, sjs);
+				      }(document, 'script', 'bitmojikit-sdk'));
+				    </script>
+
 						<p id="magnitude"></p>
 
         </div>
@@ -62,6 +106,7 @@
 
 			            <input type = "text" name = "myText"
 			                  value = "what's on your mind?" />
+
 			            <button onclick="mindText()" type="button">GO</button>
 
 			            <button type="speak">SPEAK</button>
