@@ -36,6 +36,27 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+#top-head{
+    font-family: 'Staatliches', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 310%;
+    color: white;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+#left{
+    width: 40%;
+}
+
+#right{
+    width: 40%;
+}
+
 }
 footer {
     position: fixed;
