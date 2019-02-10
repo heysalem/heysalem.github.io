@@ -44,16 +44,22 @@ body {
 }
 
 .content{
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
 }
 
-.left{
-    width: 40%;
+.up{
+    margin: 2%;
+    padding: 5px;
+    width: inherit;
+    border-style: dotted;
 }
 
-.right{
-    width: 40%;
+.middle{
+    margin: 2%;
+    padding: 5px;
+    border-style: dotted;
+    width: inherit;
     font-size: 20px;
 }
 #salem { /* display Salem's response */
@@ -61,14 +67,19 @@ body {
 }
 #user { /* display user input */
   color: white;
+  display: flex;
+  justify-content: flex-end;
 }
 #magnitide {  /* display magnitude of response */
 
 }
 
 .bottom {
+  display: flex;
+  justify-content: center;
   position: fixed;
-  bottom: 10px;
+  bottom: 5%;
+  width: 100%;
 }
 
 /* footer */
