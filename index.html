@@ -1,23 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 
 <head>
 	<meta charset="UTF-8">
 	<title>hey, Salem</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+
+    <!--IMPORT FONTS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Staatliches');
+    </style>
 </head>
 
 
 <body>
+
+		<!--SNAPCHAT LOGIN-->
+		<div id="my-login-button-target" />
+		<script>
+			window.snapKitInit = function () {
+				var loginButtonIconId = 'my-login-button-target';
+				// Mount Login Button
+				snap.loginkit.mountButton(loginButtonIconId, {
+					clientId: '86211806-7778-49d4-a575-b30590ea5d18',
+					redirectURI: 'https://heysalem.github.io/',
+					scopeList: [
+						'user.display_name',
+						'user.bitmoji.avatar',
+					],
+					handleResponseCallback: function() {
+						snap.loginkit.fetchUserInfo()
+							.then(data => console.log('User info:', data));
+						},
+					});
+				};
+      // Load the SDK asynchronously
+      (function (d, s, id) {
+        var js, sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/login.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      }(document, 'script', 'loginkit-sdk'));
+    </script>
+
+    <!--HEADER-->
+    <div id="top-head">HEY<b style="font-size: 150%;">SALEM</b></div>
+
+    <br><br>
+
+    <!--MAIN CONTENT-->
     <div class="content">
-    text
+        <div id="left">
+            hi
+        </div>
+
+        <div id="right">
+            how are u
+        </div>
     </div>
-    
+
     <footer><a href="pp.html">Privacy Policy</a></footer>
-    
-    <script src="main.js"></script>
-    
+
+
 </body>
-    
+
 </html>

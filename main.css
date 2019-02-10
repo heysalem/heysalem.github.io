@@ -1,3 +1,7 @@
+/*font-family: 'Roboto Condensed', sans-serif; // main font
+font-family: 'Staatliches', cursive; // logo font
+*/
+
 :root {
     --main-accent-color: #f7b4c9;
     --main-accent-color-fade: #fff7f9;
@@ -23,6 +27,14 @@ a:hover {
     cursor: crosshair;
 }
 body {
+    background-color: lightgray;
+    height: 100vh;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
 }
 footer {
