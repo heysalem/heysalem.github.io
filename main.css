@@ -108,7 +108,7 @@ body {
     font-size: 20px;
 }
 #salem { /* display Salem's response */
-
+    color: black;
 }
 #user { /* display user input */
   color: var(--next-accent-color);
